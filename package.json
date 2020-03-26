@@ -1,0 +1,24 @@
+{
+  "name": "@thejellyfish/geohash",
+  "version": "1.0.0",
+  "description": "GeoHash encode/decode that allow some location formats for convenience - Largely inspired from https://github.com/sunng87/node-geohash.",
+  "keywords": ["geohash"],
+  "license": "ISC",
+  "author": "thejellyfish <the@jellyfish-commuting.com>",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^25.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thejellyfish/geohash.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thejellyfish/geohash/issues"
+  },
+  "homepage": "https://github.com/thejellyfish/geohash#readme"
+}

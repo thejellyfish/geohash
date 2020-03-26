@@ -1,2 +1,55 @@
-# geohash
-Custom location format of package 'https://github.com/sunng87/node-geohash' for convenience 
+# GeoHash encode/decode
+
+GeoHash encode/decode that allow some location formats for convenience - Largely inspired from https://github.com/sunng87/node-geohash.
+More infos about GeoHash https://en.wikipedia.org/wiki/Geohash
+
+For convenience in some of my codes, allow differents format of location to encode/decode GeoHash
+
+- GeoJson of type 'Point'
+- GeoPoint from elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
+- { longitude, latitude} object from some react native location packages
+
+### Install
+
+    yarn add @jellyfish/geohash
+
+or
+
+    npm install @jellyfish/geohash
+
+### Usage
+
+    import { encode } from '@jellyfish/geohash';
+
+    // ... random location (*_*)
+    const longitude = 4.2122126;
+    const latitude = 36.4511093;
+
+    // Encode a GeoJSON Point
+    encode({
+      type: 'Point',
+      coordinates: [longitude, latitude]
+    }, 7);
+
+    // Encode an Elasticsearch GeoPoint as an object
+    encode({
+      lon: longitude,
+      lat: latitude,
+    }, 7);
+
+    // Encode an Elasticsearch GeoPoint as string
+    encode(`${latitude},${longitude}`, 7);
+
+    // Encode an Elasticsearch GeoPoint as an array
+    encode([longitude, latitude], 7);
+
+    // Encode an Elasticsearch GeoPoint as WKT POINT primitive
+    encode(`POINT (${longitude} ${latitude})`, 7);
+
+    // Encode { longitude, latitude } object
+    encode({ longitude, latitude }, 7);
+
+### Return values
+
+    encode(location, len) // return the GeoHash of len chars
+    decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
