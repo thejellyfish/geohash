@@ -1,6 +1,6 @@
 # GeoHash encode/decode
 
-GeoHash encode/decode that allow some location formats for convenience - Largely inspired from https://github.com/sunng87/node-geohash.   
+Largely inspired from https://github.com/sunng87/node-geohash.   
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
 For convenience in some of my codes, allow differents format of location to encode/decode GeoHash
