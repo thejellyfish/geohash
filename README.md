@@ -19,39 +19,39 @@ npm install @thejellyfish/geohash
 ```
 ### Usage
 ```javascript
-    import { encode } from '@thejellyfish/geohash';
+    import GeoHash from '@thejellyfish/geohash';
 
     // ... random location (*_*)
     const longitude = 4.2122126;
     const latitude = 36.4511093;
 
     // Encode a GeoJSON Point
-    encode({
+    GeoHash.encode({
       type: 'Point',
       coordinates: [longitude, latitude]
     }, 7);
 
     // Encode an Elasticsearch GeoPoint as an object
-    encode({
+    GeoHash.encode({
       lon: longitude,
       lat: latitude,
     }, 7);
 
     // Encode an Elasticsearch GeoPoint as string
-    encode(`${latitude},${longitude}`, 7);
+    GeoHash.encode(`${latitude},${longitude}`, 7);
 
     // Encode an Elasticsearch GeoPoint as an array
-    encode([longitude, latitude], 7);
+    GeoHash.encode([longitude, latitude], 7);
 
     // Encode an Elasticsearch GeoPoint as WKT POINT primitive
-    encode(`POINT (${longitude} ${latitude})`, 7);
+    GeoHash.encode(`POINT (${longitude} ${latitude})`, 7);
 
     // Encode { longitude, latitude } object
-    encode({ longitude, latitude }, 7);
+    GeoHash.encode({ longitude, latitude }, 7);
 ```
 
 ### Return values
 ```javascript
-    encode(location, len) // return the GeoHash of len chars
-    decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
+    GeoHash.encode(location, len) // return the GeoHash of len chars
+    GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
 ```
