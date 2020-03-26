@@ -63,12 +63,12 @@ GeoHash.encode({ longitude, latitude }, 7);
 ### Return values
 ```javascript
 GeoHash.encode(location, len) // return the GeoHash of len chars
-GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
+GeoHash.decode(hash) // return { longitude, latitude, error: { longitude, latitude } }
 ```
 ### Location allowable formats
 
 ```
-format GeoJSON 
+GeoJSON :
 {
   type: 'Feature',
   geometry: {
@@ -78,33 +78,33 @@ format GeoJSON
 }
 ```
 ```
-format GeoJSON Point (specially used in MongoDB) 
+GeoJSON Point (specially used in MongoDB) :
 {
   type: 'Point',
   coordinates: [longitude, latitude]
 }
 ```
 ```
-format Elasticsearch GeoPoint as an object 
+Elasticsearch GeoPoint as an object :
 {
   lon: longitude,
   lat: latitude,
 }
 ```
 ```
-format Elasticsearch GeoPoint as string 
+Elasticsearch GeoPoint as string :
 '{latitude}, {longitude}'
 ```
 ```
-format Elasticsearch GeoPoint as array 
+Elasticsearch GeoPoint as array :
 [latitude, longitude]
 ```
 ```
-format Elasticsearch GeoPoint as WKT POINT primitive 
+Elasticsearch GeoPoint as WKT POINT primitive :
 'POINT ({longitude},{latitude})'
 ```
 ```
-format object 
+object :
 {
   longitude,
   latitude,
