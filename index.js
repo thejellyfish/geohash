@@ -18,13 +18,13 @@ const MAX_LON = 180;
 // For convenience, allow differents format of location to encode/decode in GeoHash
 // -
 // Ex:
-//  · GeoJson of type 'Point'
+//  · GeoJSON of type 'Point' also used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point
 //  · GeoPoint from elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
-//  · { longitude, latitude} object from some react native location packages//
+//  · { longitude, latitude} object from some react native location packages
 //-------
 function extractLonLat(location) {
   // Array ? (Specially from elasticsearch GeoPoint)
-  if (Array.isArray(location) && location.length >= 2) {
+  if (Array.isArray(location)) {
     return { longitude: location[0], latitude: location[1] };
   }
 
@@ -44,9 +44,11 @@ function extractLonLat(location) {
     if (matches) {
       return { longitude: parseFloat(matches[1]), latitude: parseFloat(matches[2]) };
     }
+
+    throw Error(`No pattern match for location "${location}" ...`);
   }
 
-  // GeoJSON Point ?
+  // GeoJSON Point ? (Specially from MongoDB)
   if (location.type === 'Point') {
     return { longitude: location.coordinates[0], latitude: location.coordinates[1] };
   }
