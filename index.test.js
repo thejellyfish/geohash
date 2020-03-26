@@ -17,6 +17,17 @@ describe('Encode location', () => {
     }, 7)).toBe(hash);
   });
 
+  // GeoJSON Feature
+  it('expect equal when GeoJSON Feature', () => {
+    expect(encode({
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [longitude, latitude]
+      },
+    }, 7)).toBe(hash);
+  });
+
   // ES GeoPoint as an object
   it('expect equal when ES GeoPoint as an object', () => {
     expect(encode({
