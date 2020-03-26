@@ -5,10 +5,10 @@ More infos about GeoHash https://en.wikipedia.org/wiki/Geohash
 
 For convenience in some of my codes, allow differents format of location to encode/decode GeoHash
 
-- GeoJSON mean `{ type: 'Feature', geometry: { type: 'Point': coordinates: [lon, lat] } } }`
+- GeoJSON mean `{ type: 'Feature', geometry: { type: 'Point': coordinates: [lon, lat] } }`
 - GeoJSON of type 'Point' also used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
 - GeoPoint from elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
-- { longitude, latitude} object from some react native location packages
+- `{ longitude, latitude }` object from some react native location packages
 
 ### Install
 ```bash
