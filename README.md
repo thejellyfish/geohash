@@ -20,50 +20,50 @@ npm install @thejellyfish/geohash
 ```
 ### Usage
 ```javascript
-    import GeoHash from '@thejellyfish/geohash';
+import GeoHash from '@thejellyfish/geohash';
 
-    // ... random location (*_*)
-    const longitude = 4.2122126;
-    const latitude = 36.4511093;
-    
-    // Encode a GeoJSON Point
-    GeoHash.encode({
-      type: 'Feature',
-      geometry: {
-        type: 'Point',
-        coordinates: [longitude, latitude]
-      },
-    }, 7);
+// ... random location (*_*)
+const longitude = 4.2122126;
+const latitude = 36.4511093;
 
-    // Encode a MongoDB GeoJSON Point
-    GeoHash.encode({
-      type: 'Point',
-      coordinates: [longitude, latitude]
-    }, 7);
+// Encode a GeoJSON Point
+GeoHash.encode({
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: [longitude, latitude]
+  },
+}, 7);
 
-    // Encode an Elasticsearch GeoPoint as an object
-    GeoHash.encode({
-      lon: longitude,
-      lat: latitude,
-    }, 7);
+// Encode a MongoDB GeoJSON Point
+GeoHash.encode({
+  type: 'Point',
+  coordinates: [longitude, latitude]
+}, 7);
 
-    // Encode an Elasticsearch GeoPoint as string
-    GeoHash.encode(`${latitude},${longitude}`, 7);
+// Encode an Elasticsearch GeoPoint as an object
+GeoHash.encode({
+  lon: longitude,
+  lat: latitude,
+}, 7);
 
-    // Encode an Elasticsearch GeoPoint as an array
-    GeoHash.encode([longitude, latitude], 7);
+// Encode an Elasticsearch GeoPoint as string
+GeoHash.encode(`${latitude},${longitude}`, 7);
 
-    // Encode an Elasticsearch GeoPoint as WKT POINT primitive
-    GeoHash.encode(`POINT (${longitude} ${latitude})`, 7);
+// Encode an Elasticsearch GeoPoint as an array
+GeoHash.encode([longitude, latitude], 7);
 
-    // Encode { longitude, latitude } object
-    GeoHash.encode({ longitude, latitude }, 7);
+// Encode an Elasticsearch GeoPoint as WKT POINT primitive
+GeoHash.encode(`POINT (${longitude} ${latitude})`, 7);
+
+// Encode { longitude, latitude } object
+GeoHash.encode({ longitude, latitude }, 7);
 ```
 
 ### Return values
 ```javascript
-    GeoHash.encode(location, len) // return the GeoHash of len chars
-    GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
+GeoHash.encode(location, len) // return the GeoHash of len chars
+GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
 ```
 ### Location types
 
