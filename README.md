@@ -10,16 +10,16 @@ For convenience in some of my codes, allow differents format of location to enco
 - { longitude, latitude} object from some react native location packages
 
 ### Install
-
-    yarn add @jellyfish/geohash
-
+```bash
+yarn add @thejellyfish/geohash
+```
 or
-
-    npm install @jellyfish/geohash
-
+```bash
+npm install @thejellyfish/geohash
+```
 ### Usage
-
-    import { encode } from '@jellyfish/geohash';
+```javascript
+    import { encode } from '@thejellyfish/geohash';
 
     // ... random location (*_*)
     const longitude = 4.2122126;
@@ -48,8 +48,10 @@ or
 
     // Encode { longitude, latitude } object
     encode({ longitude, latitude }, 7);
+```
 
 ### Return values
-
+```javascript
     encode(location, len) // return the GeoHash of len chars
     decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
+```
