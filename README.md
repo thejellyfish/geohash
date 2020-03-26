@@ -65,3 +65,48 @@ npm install @thejellyfish/geohash
     GeoHash.encode(location, len) // return the GeoHash of len chars
     GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
 ```
+### Location types
+
+```
+type GeoJSON 
+{
+  type: 'Feature',
+  geometry: {
+    type: 'Point',
+    coordinates: [longitude, latitude]
+  },
+}
+```
+```
+type GeoJSON Point (specially used in MongoDB) 
+{
+  type: 'Point',
+  coordinates: [longitude, latitude]
+}
+```
+```
+type Elasticsearch GeoPoint as an object 
+{
+  lon: longitude,
+  lat: latitude,
+}
+```
+```
+type Elasticsearch GeoPoint as string 
+'{latitude}, {longitude}'
+```
+```
+type Elasticsearch GeoPoint as array 
+[latitude, longitude]
+```
+```
+type Elasticsearch GeoPoint as WKT POINT primitive 
+'POINT ({longitude},{latitude})'
+```
+```
+type object 
+{
+  longitude,
+  latitude,
+}
+```
