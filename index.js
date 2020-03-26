@@ -160,7 +160,14 @@ function decode(hash_string) {
   const lat = (minLat + maxLat) / 2;
   const lon = (minLon + maxLon) / 2;
 
-  return { type: 'Point', coordinates: [lon, lat] };
+  return {
+    longitude: lon,
+    latitude: lat,
+    error: {
+      longitude: maxLon - lon,
+      latitude: maxLat - lat,
+    },
+  };
 }
 
 

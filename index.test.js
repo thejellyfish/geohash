@@ -56,8 +56,12 @@ describe('Encode location', () => {
 describe('Decode location', () => {
   it('expect GeoJSON Point', () => expect(decode(hash)).toMatchObject(
     expect.objectContaining({
-      type: 'Point',
-      coordinates: expect.arrayContaining([expect.any(Number), expect.any(Number)]),
+      longitude: expect.any(Number),
+      latitude: expect.any(Number),
+      error: {
+        longitude: expect.any(Number),
+        latitude: expect.any(Number),
+      },
     }),
   ));
 });
