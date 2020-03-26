@@ -26,7 +26,7 @@ npm install @thejellyfish/geohash
     const longitude = 4.2122126;
     const latitude = 36.4511093;
     
-    // Encode a MongoDB GeoJSON Point
+    // Encode a GeoJSON Point
     GeoHash.encode({
       type: 'Feature',
       geometry: {
@@ -35,7 +35,7 @@ npm install @thejellyfish/geohash
       },
     }, 7);
 
-    // Encode a GeoJSON Point
+    // Encode a MongoDB GeoJSON Point
     GeoHash.encode({
       type: 'Point',
       coordinates: [longitude, latitude]
