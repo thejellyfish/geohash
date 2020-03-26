@@ -10,7 +10,7 @@ const hash = encode({ longitude, latitude }, 7);
 // Start tests ...
 describe('Encode location', () => {
   // GeoJSON Point
-  it('expect equal when GeoJSON Point', async () => {
+  it('expect equal when GeoJSON Point', () => {
     expect(encode({
       type: 'Point',
       coordinates: [longitude, latitude]
@@ -18,7 +18,7 @@ describe('Encode location', () => {
   });
 
   // ES GeoPoint as an object
-  it('expect equal when ES GeoPoint as an object', async () => {
+  it('expect equal when ES GeoPoint as an object', () => {
     expect(encode({
       lon: longitude,
       lat: latitude,
@@ -26,20 +26,24 @@ describe('Encode location', () => {
   });
 
   // ES GeoPoint as string
-  it('expect equal when ES GeoPoint as string', async () => expect(encode(`${latitude},${longitude}`, 7)).toBe(hash));
+  it('expect equal when ES GeoPoint as string', () => expect(encode(`${latitude},${longitude}`, 7)).toBe(hash));
 
   // ES GeoPoint as an array
-  it('expect equal when ES GeoPoint as an array', async () => expect(encode([longitude, latitude], 7)).toBe(hash));
+  it('expect equal when ES GeoPoint as an array', () => expect(encode([longitude, latitude], 7)).toBe(hash));
 
   // ES GeoPoint as WKT POINT primitive
-  it('expect equal when ES GeoPoint as WKT POINT primitive', async () => expect(encode(`POINT (${longitude} ${latitude})`, 7)).toBe(hash));
+  it('expect equal when ES GeoPoint as WKT POINT primitive', () => expect(encode(`POINT (${longitude} ${latitude})`, 7)).toBe(hash));
 
   // { longitude, latitude } object
-  it('expect equal when { longitude, latitude } object', async () => expect(encode({ longitude, latitude }, 7)).toBe(hash));
+  it('expect equal when { longitude, latitude } object', () => expect(encode({ longitude, latitude }, 7)).toBe(hash));
+
+  // Bad location
+  it('expect exception when bad location', () => expect(() => encode('Boom !')).toThrow(Error));
+  it('expect exception when bad location', () => expect(() => encode({})).toThrow(Error));
 });
 
 describe('Decode location', () => {
-  it('expect GeoJSON Point', async () => expect(decode(hash)).toMatchObject(
+  it('expect GeoJSON Point', () => expect(decode(hash)).toMatchObject(
     expect.objectContaining({
       type: 'Point',
       coordinates: expect.arrayContaining([expect.any(Number), expect.any(Number)]),
