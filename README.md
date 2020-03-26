@@ -93,7 +93,7 @@ Elasticsearch GeoPoint as an object :
 ```
 ```
 Elasticsearch GeoPoint as string :
-'{latitude}, {longitude}'
+'{latitude},{longitude}'
 ```
 ```
 Elasticsearch GeoPoint as array :
