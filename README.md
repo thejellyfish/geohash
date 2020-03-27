@@ -3,11 +3,11 @@
 Largely inspired from https://github.com/sunng87/node-geohash.   
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
-For convenience in some of my codes, allow differents format of location to encode/decode GeoHash
+For convenience in some of my codes, allow differents format of location to encode GeoHash
 
 - GeoJSON mean `{ type: 'Feature', geometry: { type: 'Point': coordinates: [lon, lat] } }`
 - GeoJSON of type 'Point' also used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
-- GeoPoint from elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
+- GeoPoint from Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
 - `{ longitude, latitude }` object from some react native location packages
 
 ### Install
@@ -63,12 +63,12 @@ GeoHash.encode({ longitude, latitude }, 7);
 ### Return values
 ```javascript
 GeoHash.encode(location, len) // return the GeoHash of len chars
-GeoHash.decode(hash) // return GeoJson { type: 'Point', coordinates: [lon, lat] }
+GeoHash.decode(hash) // return { longitude, latitude, error: { longitude, latitude } }
 ```
-### Location types
+### Location allowable formats
 
 ```
-type GeoJSON 
+GeoJSON :
 {
   type: 'Feature',
   geometry: {
@@ -78,33 +78,33 @@ type GeoJSON
 }
 ```
 ```
-type GeoJSON Point (specially used in MongoDB) 
+GeoJSON Point (specially used in MongoDB) :
 {
   type: 'Point',
   coordinates: [longitude, latitude]
 }
 ```
 ```
-type Elasticsearch GeoPoint as an object 
+Elasticsearch GeoPoint as an object :
 {
   lon: longitude,
   lat: latitude,
 }
 ```
 ```
-type Elasticsearch GeoPoint as string 
-'{latitude}, {longitude}'
+Elasticsearch GeoPoint as string :
+'{latitude},{longitude}'
 ```
 ```
-type Elasticsearch GeoPoint as array 
+Elasticsearch GeoPoint as array :
 [latitude, longitude]
 ```
 ```
-type Elasticsearch GeoPoint as WKT POINT primitive 
+Elasticsearch GeoPoint as WKT POINT primitive :
 'POINT ({longitude},{latitude})'
 ```
 ```
-type object 
+object :
 {
   longitude,
   latitude,
