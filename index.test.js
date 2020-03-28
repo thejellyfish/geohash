@@ -49,14 +49,15 @@ describe('Encode location', () => {
   it('expect equal when { longitude, latitude } object', () => expect(encode({ longitude, latitude }, 7)).toBe(hash));
 
   // Bad location
-  it('expect exception when bad string location', () => expect(() => encode('Boom !')).toThrow(Error));
-  it('expect exception when bad object location', () => expect(() => encode({})).toThrow(Error));
-  it('expect exception when bad GeoJSON location', () => expect(() => encode({ type: 'Feature' })).toThrow(Error));
-  it('expect exception when bad GeoJSON Point location', () => expect(() => encode({ type: 'Point' })).toThrow(Error));
+  it('expect TypeError with undefined', () => expect(() => encode()).toThrow(TypeError));
+  it('expect TypeError with bad string location', () => expect(() => encode('Boom !')).toThrow(TypeError));
+  it('expect TypeError with bad object location', () => expect(() => encode({})).toThrow(TypeError));
+  it('expect TypeError with bad GeoJSON location', () => expect(() => encode({ type: 'Feature' })).toThrow(TypeError));
+  it('expect TypeError with bad GeoJSON Point location', () => expect(() => encode({ type: 'Point' })).toThrow(TypeError));
 });
 
 describe('Decode location', () => {
-  it('expect GeoJSON Point', () => expect(decode(hash)).toMatchObject(
+  it('expect location props', () => expect(decode(hash)).toMatchObject(
     expect.objectContaining({
       longitude: expect.any(Number),
       latitude: expect.any(Number),

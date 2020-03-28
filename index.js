@@ -1,6 +1,6 @@
 //-------
 // Largely inspired from https://github.com/sunng87/node-geohash
-// ... very very minor changes for convenience in my codes
+// ... minor changes for convenience in my codes
 //-------
 
 const BASE32_CODES = '0123456789bcdefghjkmnpqrstuvwxyz';
@@ -46,7 +46,7 @@ function extractLonLat(location) {
       return { longitude: parseFloat(matches[1]), latitude: parseFloat(matches[2]) };
     }
 
-    throw Error(`No pattern match for location "${location}" ...`);
+    throw TypeError(`No pattern match for location "${location}" ...`);
   }
 
   // GeoJSON Point ? (Specially from MongoDB)
@@ -69,7 +69,7 @@ function extractLonLat(location) {
     return location;
   }
 
-  throw Error('Invalid location parameter ...');
+  throw TypeError('Invalid location parameter ...');
 }
 
 //-------
