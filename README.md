@@ -65,7 +65,7 @@ GeoHash.encode({ longitude, latitude }, 7);
 GeoHash.encode(location, len) // return the GeoHash of len chars
 GeoHash.decode(hash) // return { longitude, latitude, error: { longitude, latitude } }
 ```
-Throw TypeEror if bad location parameter
+Throw TypeError if bad location parameter
 
 ### Location allowable formats
 
