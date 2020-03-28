@@ -3,7 +3,7 @@
 Largely inspired from https://github.com/sunng87/node-geohash.   
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
-For convenience in some of my codes, differents format of location are possible :
+For convenience in some of my codes, different location formats are possible :
 
 - GeoJSON
 - Point specially used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
