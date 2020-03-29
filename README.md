@@ -95,7 +95,7 @@ Elasticsearch GeoPoint as an object :
 ```
 ```
 Elasticsearch GeoPoint as string :
-'{latitude},{longitude}'
+'latitude,longitude'
 ```
 ```
 Elasticsearch GeoPoint as array :
@@ -103,7 +103,7 @@ Elasticsearch GeoPoint as array :
 ```
 ```
 Elasticsearch GeoPoint as WKT POINT primitive :
-'POINT ({longitude},{latitude})'
+'POINT (longitude,latitude)'
 ```
 ```
 object :
