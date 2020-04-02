@@ -12,15 +12,15 @@ For convenience in some of my codes, different location formats are possible :
 
 ### Install
 ```bash
-yarn add @thejellyfish/geohash
+yarn add @jellyfish/geohash
 ```
 or
 ```bash
-npm install @thejellyfish/geohash
+npm install @jellyfish/geohash
 ```
 ### Usage
 ```javascript
-import GeoHash from '@thejellyfish/geohash';
+import GeoHash from '@jellyfish/geohash';
 
 // ... random location (*_*)
 const longitude = 4.2122126;
