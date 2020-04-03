@@ -42,10 +42,7 @@ GeoHash.encode({
 }, 7);
 
 // Encode an Elasticsearch GeoPoint as an object
-GeoHash.encode({
-  lon: longitude,
-  lat: latitude,
-}, 7);
+GeoHash.encode({ lon: longitude, lat: latitude }, 7);
 
 // Encode an Elasticsearch GeoPoint as string
 GeoHash.encode(`${latitude},${longitude}`, 7);
