@@ -6,8 +6,8 @@ More infos about GeoHash https://en.wikipedia.org/wiki/Geohash
 For convenience in some of my codes, different location formats are possible :
 
 - GeoJSON
-- Point specially used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
-- GeoPoint from Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
+- MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
+- Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
 - `{ longitude, latitude }` object from some react native location packages
 
 ### Install
