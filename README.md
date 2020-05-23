@@ -7,7 +7,7 @@ For convenience in some of my codes, different location formats are possible :
 - GeoJSON
 - MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
 - Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
-- `{ longitude, latitude }` object from some react native location packages
+- `{ longitude, latitude }` object from some packages
 
 _Inspired from https://github.com/sunng87/node-geohash._  
 
