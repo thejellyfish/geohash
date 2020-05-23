@@ -62,7 +62,20 @@ GeoHash.encode({ longitude, latitude }, 7);
 ### Return values
 ```javascript
 GeoHash.encode(location, len) // return the GeoHash of len chars
-GeoHash.decode(hash) // return GeoJSON feature
+
+GeoHash.decode(hash) 
+// return GeoJSON feature
+// {
+//    type: 'Feature',
+//    geometry: {
+//      type: 'Point',
+//      coordinates: [lon, lat],
+//    },
+//    properties: {
+//      longitude_error,
+//      latitude_error,
+//    },
+//  }
 ```
 Throw TypeError if bad location parameter
 
