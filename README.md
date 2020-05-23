@@ -77,6 +77,9 @@ GeoHash.decode(hash)
 //    },
 //  }
 ```
+
+### Exception
+
 Throw TypeError if bad location parameter
 
 ### Location allowable formats
