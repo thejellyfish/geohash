@@ -1,6 +1,6 @@
 {
   "name": "@thejellyfish/geohash",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "GeoHash encode/decode that allow some location formats for convenience",
   "keywords": ["geohash"],
   "license": "ISC",
