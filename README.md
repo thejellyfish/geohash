@@ -9,7 +9,7 @@ For convenience in some of my codes, different location formats are supported :
 - Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
 - `{ longitude, latitude }` object from some packages
 
-[See list of supported formats](#Supported formats)
+[See list of supported formats](#supported-formats)
 
 _Inspired from https://github.com/sunng87/node-geohash._  
 
@@ -84,7 +84,7 @@ GeoHash.decode(hash);
 
 Throw TypeError if bad location parameter
 
-### Supported formats
+### <a name="supported-formats"></a>Supported formats
 
 GeoJSON :
 ```
