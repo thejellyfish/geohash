@@ -1,6 +1,5 @@
 # GeoHash encode/decode
 
-Largely inspired from https://github.com/sunng87/node-geohash.   
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
 For convenience in some of my codes, different location formats are possible :
@@ -9,6 +8,9 @@ For convenience in some of my codes, different location formats are possible :
 - MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
 - Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
 - `{ longitude, latitude }` object from some react native location packages
+
+_Largely inspired from https://github.com/sunng87/node-geohash._  
+
 
 ### Install
 ```bash
