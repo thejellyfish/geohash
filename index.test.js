@@ -59,12 +59,11 @@ describe('Encode location', () => {
 describe('Decode location', () => {
   it('expect location props', () => expect(decode(hash)).toMatchObject(
     expect.objectContaining({
-      longitude: expect.any(Number),
-      latitude: expect.any(Number),
-      error: {
-        longitude: expect.any(Number),
-        latitude: expect.any(Number),
-      },
+      type: 'Feature',
+      geometry: expect.objectContaining({
+        type: 'Point',
+        coordinates: expect.arrayContaining([expect.any(Number)]),
+      })
     }),
   ));
 });

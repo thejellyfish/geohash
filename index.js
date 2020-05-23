@@ -161,11 +161,14 @@ function decode(hash_string) {
   const lon = (minLon + maxLon) / 2;
 
   return {
-    longitude: lon,
-    latitude: lat,
-    error: {
-      longitude: maxLon - lon,
-      latitude: maxLat - lat,
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [lon, lat],
+    },
+    properties: {
+      longitude_error: maxLon - lon,
+      latitude_error: maxLat - lat,
     },
   };
 }
