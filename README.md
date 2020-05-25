@@ -68,14 +68,14 @@ GeoHash.encode({ longitude, latitude }, 7);
 ```
 
 ### Return values
-```
+```javascript
 GeoHash.encode(location, len);
-Return the GeoHash of len chars
+// Return the GeoHash of len chars
 ```
 
-```
+```javascript
 GeoHash.decode(hash); 
-Return a GeoJSON :
+// Return a GeoJSON :
 {
   type: 'Feature',
   geometry: {
