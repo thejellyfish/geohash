@@ -8,7 +8,7 @@
 
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
-encode/decode a Geohash with support of MongoDB, ElasticSearch and GeoJSON formats for convenience :
+GeoHash encode/decode with support of MongoDB, ElasticSearch and GeoJSON formats for convenience :
 
 - GeoJSON https://en.wikipedia.org/wiki/GeoJSON
 - MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
