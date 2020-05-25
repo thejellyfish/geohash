@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+- node
+
+cache:
+  directories:
+  - node_modules
+
+install:
+- yarn install
+
+script:
+- yarn test
+- yarn coverage
+
+before_deploy:
+- yarn version --new-version $TRAVIS_TAG
+
+deploy:
+  provider: npm
+  email: "$NPM_EMAIL"
+  api_key: "$NPM_TOKEN"
+  skip_cleanup: true
+  on:
+    tags: true

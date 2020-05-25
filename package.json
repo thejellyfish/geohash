@@ -1,16 +1,17 @@
 {
   "name": "@thejellyfish/geohash",
-  "version": "1.0.4",
   "description": "GeoHash encode/decode that allow some location formats for convenience",
   "keywords": ["geohash"],
   "license": "ISC",
   "author": "thejellyfish <the@jellyfish-commuting.com>",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "coverage": "codecov"
   },
   "dependencies": {},
   "devDependencies": {
+    "codecov": "^3.7.0",
     "jest": "^25.2.0"
   },
   "repository": {
@@ -20,5 +21,18 @@
   "bugs": {
     "url": "https://github.com/thejellyfish/geohash/issues"
   },
-  "homepage": "https://github.com/thejellyfish/geohash#readme"
+  "homepage": "https://github.com/thejellyfish/geohash#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "index.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text-summary"
+    ]
+  }
 }
