@@ -69,21 +69,26 @@ GeoHash.encode({ longitude, latitude }, 7);
 
 ### Return values
 ```javascript
-GeoHash.encode(location, len); // return the GeoHash of len chars
+GeoHash.encode(location, len);
+```
+Return the GeoHash of len chars
 
+```javascript
 GeoHash.decode(hash); 
-// return GeoJSON feature
-// {
-//    type: 'Feature',
-//    geometry: {
-//      type: 'Point',
-//      coordinates: [lon, lat],
-//    },
-//    properties: {
-//      longitude_error,
-//      latitude_error,
-//    },
-//  }
+```
+Return a GeoJSON 
+```
+{
+  type: 'Feature',
+  geometry: {
+  type: 'Point',
+    coordinates: [lon, lat],  // Coordinates decoded
+  },
+  properties: {
+   longitude_error,  // Longitude error 
+   latitude_error,   // Latitude error
+  },
+}
 ```
 
 ### Exception
