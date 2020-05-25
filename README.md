@@ -8,16 +8,14 @@
 
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
 
-For convenience in some of my codes, different location formats are supported :
+encode/decode a Geohash with support of MongoDB, ElasticSearch and GeoJSON formats for convenience :
 
-- GeoJSON
+- GeoJSON https://en.wikipedia.org/wiki/GeoJSON
 - MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
 - Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
-- `{ longitude, latitude }` object from some packages
+- `{ longitude, latitude }` object commonly used in some packages
 
 [See list of supported formats](#supported-formats)
-
-Helpful to encode a Geohash from MongoDB or ElasticSearch result without worrying about the format returned  
 
 _Inspired from https://github.com/sunng87/node-geohash._  
 
