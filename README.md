@@ -1,3 +1,9 @@
+![Version](https://img.shields.io/npm/v/@thejellyfish/geohash)
+![Licence](https://img.shields.io/npm/l/@thejellyfish/geohash)
+![Build](https://img.shields.io/travis/thejellyfish/geohash)
+![Coverage](https://img.shields.io/codecov/c/github/thejellyfish/geohash)
+![Downloads](https://img.shields.io/npm/dt/@thejellyfish/geohash)
+
 # GeoHash encode/decode
 
 More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
