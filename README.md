@@ -32,7 +32,7 @@ npm install @thejellyfish/geohash
 ```javascript
 import GeoHash from '@thejellyfish/geohash';
 
-// ... random location (*_*)
+// ... coordinates in example
 const longitude = 4.2122126;
 const latitude = 36.4511093;
 
@@ -41,30 +41,30 @@ GeoHash.encode({
   type: 'Feature',
   geometry: {
     type: 'Point',
-    coordinates: [longitude, latitude]
+    coordinates: [4.2122126, 36.4511093]
   },
 }, 7);
 
 // Encode a MongoDB GeoJSON Point
 GeoHash.encode({
   type: 'Point',
-  coordinates: [longitude, latitude]
+  coordinates: [4.2122126, 36.4511093]
 }, 7);
 
 // Encode an Elasticsearch GeoPoint as an object
-GeoHash.encode({ lon: longitude, lat: latitude }, 7);
+GeoHash.encode({ lon: 4.2122126, lat: 36.4511093 }, 7);
 
 // Encode an Elasticsearch GeoPoint as string
-GeoHash.encode(`${latitude},${longitude}`, 7);
+GeoHash.encode('36.4511093,4.2122126', 7);
 
 // Encode an Elasticsearch GeoPoint as an array
-GeoHash.encode([longitude, latitude], 7);
+GeoHash.encode([4.2122126, 36.4511093], 7);
 
 // Encode an Elasticsearch GeoPoint as WKT POINT primitive
-GeoHash.encode(`POINT (${longitude} ${latitude})`, 7);
+GeoHash.encode('POINT (4.2122126 36.4511093)', 7);
 
 // Encode { longitude, latitude } object
-GeoHash.encode({ longitude, latitude }, 7);
+GeoHash.encode({ longitude: 4.2122126, latitude: 36.4511093 }, 7);
 
 // Decode
 GeoHash.decode('sn6zrge');
