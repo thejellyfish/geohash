@@ -1,8 +1,8 @@
-![Version](https://img.shields.io/npm/v/@thejellyfish/geohash)
-![Licence](https://img.shields.io/npm/l/@thejellyfish/geohash)
-![Build](https://img.shields.io/travis/thejellyfish/geohash)
-![Coverage](https://img.shields.io/codecov/c/github/thejellyfish/geohash)
-![Downloads](https://img.shields.io/npm/dt/@thejellyfish/geohash)
+[![Version](https://img.shields.io/npm/v/@thejellyfish/geohash)](https://www.npmjs.com/package/@thejellyfish/geohash)
+[![Licence](https://img.shields.io/npm/l/@thejellyfish/geohash)](https://en.wikipedia.org/wiki/ISC_license)
+[![Build](https://img.shields.io/travis/thejellyfish/geohash)](https://travis-ci.org/github/thejellyfish/geohash)
+[![Coverage](https://img.shields.io/codecov/c/github/thejellyfish/geohash)](https://codecov.io/gh/thejellyfish/geohash)
+[![Downloads](https://img.shields.io/npm/dt/@thejellyfish/geohash)](https://www.npmjs.com/package/@thejellyfish/geohash)
 
 # GeoHash encode/decode
 
