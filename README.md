@@ -65,6 +65,22 @@ GeoHash.encode(`POINT (${longitude} ${latitude})`, 7);
 
 // Encode { longitude, latitude } object
 GeoHash.encode({ longitude, latitude }, 7);
+
+// Decode
+GeoHash.decode('sn6zrge');
+// Return 
+// {
+//   type: 'Feature',
+//   geometry: {
+//     type: 'Point',
+//     coordinates: [ 4.2125701904296875, 36.45057678222656 ]
+//   },
+//   properties: {
+//     longitude_error: 0.0006866455078125,
+//     latitude_error: 0.0006866455078125
+//   }
+// }
+
 ```
 
 ### Return values
