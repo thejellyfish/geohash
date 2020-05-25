@@ -145,7 +145,7 @@ Elasticsearch GeoPoint as string :
    
 Elasticsearch GeoPoint as array :
 ```
-[latitude, longitude]
+[longitude, latitude]
 ```
    
 Elasticsearch GeoPoint as WKT POINT primitive :
