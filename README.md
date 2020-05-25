@@ -95,7 +95,7 @@ GeoHash.decode(hash);
 {
   type: 'Feature',
   geometry: {
-  type: 'Point',
+    type: 'Point',
     coordinates: [lon, lat],  // Coordinates decoded
   },
   properties: {
