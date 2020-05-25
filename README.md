@@ -17,6 +17,8 @@ For convenience in some of my codes, different location formats are supported :
 
 [See list of supported formats](#supported-formats)
 
+Helpful to encode a Geohash from MongoDB or ElasticSearch result without worrying about the format returned  
+
 _Inspired from https://github.com/sunng87/node-geohash._  
 
 
