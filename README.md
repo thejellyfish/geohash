@@ -95,8 +95,6 @@ GeoHash.encode(location, len);
 
 Return a GeoHash of len chars
 
-### Params
-
 ```javascript
 GeoHash.decode(hash); 
 ```
