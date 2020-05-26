@@ -93,8 +93,6 @@ GeoHash.encode(location, len);
 | `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
 | `len`      | `string`                        | geohash length<br >_(affect the precision of the geohash)_|
 
-### Return value
-
 Return a GeoHash of len chars
 
 ### Params
@@ -107,8 +105,6 @@ GeoHash.decode(hash);
 |--------|----------|-------------------|
 | `hash` | `string` | Geohash to decode |
 
-
-### Return value
 
 Return a GeoJSON
 
