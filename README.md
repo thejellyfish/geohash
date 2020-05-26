@@ -82,16 +82,37 @@ GeoHash.decode('sn6zrge');
 // }
 
 ```
+### Params
 
-### Return values
 ```javascript
 GeoHash.encode(location, len);
-// Return the GeoHash of len chars
 ```
+
+| Prop       | Type                            |  Note                                                               |
+|------------|---------------------------------|---------------------------------------------------------------------|
+| `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
+| `len`      | `string`                        | geohash length<br >_(affect the precision of the geohash)_|
+
+### Return value
+
+Return a GeoHash of len chars
+
+### Params
 
 ```javascript
 GeoHash.decode(hash); 
-// Return a GeoJSON :
+```
+
+| Prop   | Type     |  Note             |
+|--------|----------|-------------------|
+| `hash` | `string` | Geohash to decode |
+
+
+### Return value
+
+Return a GeoJSON
+
+```
 {
   type: 'Feature',
   geometry: {
