@@ -1,6 +1,8 @@
 //-------
-// Largely inspired from https://github.com/sunng87/node-geohash
+// Inspired by https://github.com/sunng87/node-geohash
 // ... minor changes for convenience in my codes
+// Geohash.encode : support MongoDB, ElasticSearch and GeoJSON formats
+// Geohash.decode : result to normalized GeoJSON format
 //-------
 
 const BASE32_CODES = '0123456789bcdefghjkmnpqrstuvwxyz';
@@ -15,13 +17,13 @@ const MIN_LON = -180;
 const MAX_LON = 180;
 
 //-------
-// For convenience, allow differents format of location to encode/decode in GeoHash
+// For convenience, support different formats of location
 // -
 // Ex:
 //  · GeoJSON (mean { type: 'Feature', geometry: { type: 'Point': coordinates: [lon, lat] } } })
 //  · GeoJSON of type 'Point' also used by MongoDB https://docs.mongodb.com/manual/reference/geojson/#point
 //  · GeoPoint from elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
-//  · { longitude, latitude} object from some react native location packages
+//  · { longitude, latitude} object commonly used in some packages
 //-------
 function extractLonLat(location) {
   // Array ? (Specially from elasticsearch GeoPoint)
