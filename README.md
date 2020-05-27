@@ -17,7 +17,7 @@ GeoHash encode/decode with support of MongoDB, ElasticSearch and GeoJSON formats
 
 [See list of supported formats](#supported-formats)
 
-_Inspired from https://github.com/sunng87/node-geohash._  
+_Inspired by https://github.com/sunng87/node-geohash._  
 
 
 ### Install
@@ -32,7 +32,7 @@ npm install @thejellyfish/geohash
 ```javascript
 import GeoHash from '@thejellyfish/geohash';
 
-// ... coordinates in example
+// ... coordinates example
 const longitude = 4.2122126;
 const latitude = 36.4511093;
 
@@ -93,7 +93,7 @@ GeoHash.encode(location, len);
 | `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
 | `len`      | `string`                        | geohash length<br >_(affect the precision of the geohash)_|
 
-_Return a GeoHash of len chars_    
+_Return a GeoHash of length chars_    
 <br />
          
 ```javascript
