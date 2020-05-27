@@ -91,7 +91,7 @@ GeoHash.encode(location, len);
 | Prop       | Type                            |  Note                                                               |
 |------------|---------------------------------|---------------------------------------------------------------------|
 | `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
-| `len`      | `string`                        | geohash length<br >_(affect the precision of the geohash)_|
+| `len`      | `string`                        | geohash length<br >_(affect the precision of geohash)_              |
 
 _Return a GeoHash of length chars_    
 <br />
