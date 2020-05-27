@@ -1,8 +1,8 @@
 {
   "name": "@thejellyfish/geohash",
-  "description": "GeoHash encode/decode that allow some location formats for convenience",
+  "description": "GeoHash encode/decode that support MongoDB, ElasticSearch and GeoJSON formats for convenience",
   "keywords": ["geohash"],
-  "license": "ISC",
+  "license": "MIT",
   "author": "thejellyfish <the@jellyfish-commuting.com>",
   "main": "index.js",
   "scripts": {
