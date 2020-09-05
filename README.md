@@ -1,36 +1,36 @@
-[![Version](https://img.shields.io/npm/v/@thejellyfish/geohash)](https://www.npmjs.com/package/@thejellyfish/geohash)
-[![Licence](https://img.shields.io/npm/l/@thejellyfish/geohash)](https://en.wikipedia.org/wiki/ISC_license)
-[![Build](https://img.shields.io/travis/thejellyfish/geohash)](https://travis-ci.org/github/thejellyfish/geohash)
-[![Coverage](https://img.shields.io/codecov/c/github/thejellyfish/geohash)](https://codecov.io/gh/thejellyfish/geohash)
-[![Downloads](https://img.shields.io/npm/dt/@thejellyfish/geohash)](https://www.npmjs.com/package/@thejellyfish/geohash)
+[![Version](https://img.shields.io/npm/v/@jellyfish-commuting/geohash)](https://www.npmjs.com/package/@jellyfish-commuting/geohash)
+[![Licence](https://img.shields.io/npm/l/@jellyfish-commuting/geohash)](https://en.wikipedia.org/wiki/MIT_license)
+[![Build](https://img.shields.io/travis/jellyfish-commuting/geohash)](https://travis-ci.org/github/jellyfish-commuting/geohash)
+[![Coverage](https://img.shields.io/codecov/c/github/jellyfish-commuting/geohash)](https://codecov.io/gh/jellyfish-commuting/geohash)
+[![Downloads](https://img.shields.io/npm/dt/@jellyfish-commuting/geohash)](https://www.npmjs.com/package/@jellyfish-commuting/geohash)
 
 # GeoHash encode/decode
 
-More infos about GeoHash https://en.wikipedia.org/wiki/Geohash   
+More infos about GeoHash https://en.wikipedia.org/wiki/Geohash
 
 GeoHash encode/decode with support of MongoDB, ElasticSearch and GeoJSON formats :
 
 - GeoJSON https://en.wikipedia.org/wiki/GeoJSON
-- MongoDB https://docs.mongodb.com/manual/reference/geojson/#point   
+- MongoDB https://docs.mongodb.com/manual/reference/geojson/#point
 - Elasticsearch https://www.elastic.co/guide/en/elasticsearch/reference/7.6/geo-point.html
 - `{ longitude, latitude }` object commonly used in some packages
 
 [See list of supported formats](#supported-formats)
 
-_Inspired by https://github.com/sunng87/node-geohash._  
+_Inspired by https://github.com/sunng87/node-geohash._
 
 
 ### Install
 ```bash
-yarn add @thejellyfish/geohash
+yarn add @jellyfish-commuting/geohash
 ```
 or
 ```bash
-npm install @thejellyfish/geohash
+npm install @jellyfish-commuting/geohash
 ```
 ### Usage
 ```javascript
-import GeoHash from '@thejellyfish/geohash';
+import GeoHash from '@jellyfish-commuting/geohash';
 
 // ... coordinates example
 const longitude = 4.2122126;
@@ -68,7 +68,7 @@ GeoHash.encode({ longitude: 4.2122126, latitude: 36.4511093 }, 7);
 
 // Decode
 GeoHash.decode('sn6zrge');
-// Return 
+// Return
 // {
 //   type: 'Feature',
 //   geometry: {
@@ -93,11 +93,11 @@ GeoHash.encode(location, len);
 | `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
 | `len`      | `string`                        | geohash length<br >_(affect the precision of geohash)_              |
 
-_Return a GeoHash of length chars_    
+_Return a GeoHash of length chars_
 <br />
-         
+
 ```javascript
-GeoHash.decode(hash); 
+GeoHash.decode(hash);
 ```
 
 | Prop   | Type     |  Note             |
@@ -114,7 +114,7 @@ _Return a GeoJSON_
     coordinates: [lon, lat],  // Coordinates decoded
   },
   properties: {
-   longitude_error,  // Longitude error 
+   longitude_error,  // Longitude error
    latitude_error,   // Latitude error
   },
 }
@@ -136,7 +136,7 @@ GeoJSON :
   },
 }
 ```
-   
+
 GeoJSON Point (specially used in MongoDB) :
 ```
 {
@@ -144,7 +144,7 @@ GeoJSON Point (specially used in MongoDB) :
   coordinates: [longitude, latitude]
 }
 ```
-    
+
 Elasticsearch GeoPoint as an object :
 ```
 {
@@ -152,22 +152,22 @@ Elasticsearch GeoPoint as an object :
   lat: latitude,
 }
 ```
-   
+
 Elasticsearch GeoPoint as string :
 ```
 'latitude,longitude'
 ```
-   
+
 Elasticsearch GeoPoint as array :
 ```
 [longitude, latitude]
 ```
-   
+
 Elasticsearch GeoPoint as WKT POINT primitive :
 ```
 'POINT (longitude,latitude)'
 ```
-   
+
 object :
 ```
 {
