@@ -93,8 +93,10 @@ GeoHash.encode(location, len);
 | `location` | `object` or `array` or `string` | [See list of supported formats](#supported-formats)                 |
 | `len`      | `string`                        | geohash length<br >_(affect the precision of geohash)_              |
 
-_Return a GeoHash of length chars_
-<br />
+_Return a GeoHash of length chars_    
+     
+---
+    
 
 ```javascript
 GeoHash.decode(hash);
