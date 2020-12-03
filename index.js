@@ -208,11 +208,11 @@ function ensure_valid_lat(lat) {
 //-------
 // Neighbor
 //-------
-function neighbor(decoded, len, direction) {
-  return encode([
+function neighborCoordinates(decoded, direction) {
+  return [
     ensure_valid_lon(decoded.geometry.coordinates[0] + direction[0] * decoded.properties.longitude_error * 2),
     ensure_valid_lat(decoded.geometry.coordinates[1] + direction[1] * decoded.properties.latitude_error * 2),
-  ], len);
+  ];
 }
 
 //-------
@@ -224,14 +224,14 @@ function neighbors(hash) {
 
   // Return 8 neighbors
   return [
-    neighbor(decoded, hash.length, [0, 1]), // top
-    neighbor(decoded, hash.length, [1, 1]), // topleft
-    neighbor(decoded, hash.length, [1, 0]), // left
-    neighbor(decoded, hash.length, [1, -1]), // bottomleft
-    neighbor(decoded, hash.length, [0, -1]), // bottom
-    neighbor(decoded, hash.length, [-1, -1]), // bottomright
-    neighbor(decoded, hash.length, [-1, 0]), // right
-    neighbor(decoded, hash.length, [-1, 1]), // topright
+    encode(neighborCoordinates(decoded, [0, 1]), hash.length), // top
+    encode(neighborCoordinates(decoded, [1, 1]), hash.length), // topleft
+    encode(neighborCoordinates(decoded, [1, 0]), hash.length), // left
+    encode(neighborCoordinates(decoded, [1, -1]), hash.length), // bottomleft
+    encode(neighborCoordinates(decoded, [0, -1]), hash.length), // bottom
+    encode(neighborCoordinates(decoded, [-1, -1]), hash.length), // bottomright
+    encode(neighborCoordinates(decoded, [-1, 0]), hash.length), // right
+    encode(neighborCoordinates(decoded, [-1, 1]), hash.length), // topright
   ]
 }
 
