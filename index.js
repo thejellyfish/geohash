@@ -175,17 +175,18 @@ function decode(hash_string) {
   };
 }
 
-
-
-
 //-------
 // ensure_valid_lon
 //-------
 function ensure_valid_lon(lon) {
-  if (lon > MAX_LON)
+  if (lon > MAX_LON) {
     return MIN_LON + lon % MAX_LON;
-  if (lon < MIN_LON)
+  }
+
+  if (lon < MIN_LON) {
     return MAX_LON + lon % MAX_LON;
+  }
+
   return lon;
 };
 
@@ -193,10 +194,14 @@ function ensure_valid_lon(lon) {
 // ensure_valid_lat
 //-------
 function ensure_valid_lat(lat) {
-  if (lat > MAX_LAT)
+  if (lat > MAX_LAT) {
     return MAX_LAT;
-  if (lat < MIN_LAT)
+  }
+
+  if (lat < MIN_LAT) {
     return MIN_LAT;
+  }
+
   return lat;
 };
 
