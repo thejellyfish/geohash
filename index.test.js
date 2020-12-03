@@ -1,8 +1,8 @@
-const { encode, decode } = require('./index');
+const { encode, decode, neighbors } = require('./index');
 
 // Init a random location (*_*)
-const longitude = 4.2122126;
-const latitude = 36.4511093;
+const longitude = 36.716667;
+const latitude = 4.05;
 
 // Get the geohash
 const hash = encode({ longitude, latitude }, 7);
@@ -66,4 +66,21 @@ describe('Decode location', () => {
       })
     }),
   ));
+});
+
+describe('Geoash neighbors', () => {
+  it('expect neighbors props', () => {
+    const expected = [
+      'sndbuj',
+      'sndbum',
+      'sndbuk',
+      'sndbu7',
+      'sndbu5',
+      'sndbgg',
+      'sndbgu',
+      'sndbgv',
+    ];
+
+    expect(neighbors('sndbuh')).toStrictEqual(expected);
+  });
 });

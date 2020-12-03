@@ -77,7 +77,7 @@ function extractLonLat(location) {
 //-------
 // Encode
 //-------
-function encode(location, numberOfChars) {
+function encode(location, numberOfChars = 9) {
   const chars = [];
   let bits = 0;
   let bitsTotal = 0;
@@ -176,7 +176,61 @@ function decode(hash_string) {
 }
 
 
+
+
+//-------
+// ensure_valid_lon
+//-------
+function ensure_valid_lon(lon) {
+  if (lon > MAX_LON)
+    return MIN_LON + lon % MAX_LON;
+  if (lon < MIN_LON)
+    return MAX_LON + lon % MAX_LON;
+  return lon;
+};
+
+//-------
+// ensure_valid_lat
+//-------
+function ensure_valid_lat(lat) {
+  if (lat > MAX_LAT)
+    return MAX_LAT;
+  if (lat < MIN_LAT)
+    return MIN_LAT;
+  return lat;
+};
+
+//-------
+// Neighbor
+//-------
+function neighbor(decoded, len, direction) {
+  return encode([
+    ensure_valid_lon(decoded.geometry.coordinates[0] + direction[0] * decoded.properties.longitude_error * 2),
+    ensure_valid_lat(decoded.geometry.coordinates[1] + direction[1] * decoded.properties.latitude_error * 2),
+  ], len);
+}
+
+//-------
+// Neighbors
+//-------
+function neighbors(hash) {
+  // Decode hash
+  const decoded = decode(hash);
+
+  // Return 8 neighbors
+  return [
+    neighbor(decoded, hash.length, [0, 1]), // top
+    neighbor(decoded, hash.length, [1, 1]), // topleft
+    neighbor(decoded, hash.length, [1, 0]), // left
+    neighbor(decoded, hash.length, [1, -1]), // bottomleft
+    neighbor(decoded, hash.length, [0, -1]), // bottom
+    neighbor(decoded, hash.length, [-1, -1]), // bottomright
+    neighbor(decoded, hash.length, [-1, 0]), // right
+    neighbor(decoded, hash.length, [-1, 1]), // topright
+  ]
+}
+
 //-------
 // Export module
 //-------
-module.exports = { encode, decode };
+module.exports = { encode, decode, neighbors };
