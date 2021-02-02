@@ -1,5 +1,5 @@
 {
-  "name": "@jellyfish-commuting/geohash",
+  "name": "@jollie/geohash",
   "description": "GeoHash encode/decode that support MongoDB, ElasticSearch and GeoJSON formats for convenience",
   "keywords": ["geohash"],
   "license": "MIT",
@@ -16,12 +16,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jellyfish-commuting/geohash.git"
+    "url": "git://github.com/thejellyfish/geohash.git"
   },
   "bugs": {
-    "url": "https://github.com/jellyfish-commuting/geohash/issues"
+    "url": "https://github.com/thejellyfish/geohash/issues"
   },
-  "homepage": "https://github.com/jellyfish-commuting/geohash#readme",
+  "homepage": "https://github.com/thejellyfish/geohash#readme",
   "publishConfig": {
     "access": "public"
   },

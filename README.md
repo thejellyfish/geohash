@@ -1,8 +1,8 @@
-[![Version](https://img.shields.io/npm/v/@jellyfish-commuting/geohash)](https://www.npmjs.com/package/@jellyfish-commuting/geohash)
-[![Licence](https://img.shields.io/npm/l/@jellyfish-commuting/geohash)](https://en.wikipedia.org/wiki/MIT_license)
-[![Build](https://img.shields.io/travis/jellyfish-commuting/geohash)](https://travis-ci.org/github/jellyfish-commuting/geohash)
-[![Coverage](https://img.shields.io/codecov/c/github/jellyfish-commuting/geohash)](https://codecov.io/gh/jellyfish-commuting/geohash)
-[![Downloads](https://img.shields.io/npm/dt/@jellyfish-commuting/geohash)](https://www.npmjs.com/package/@jellyfish-commuting/geohash)
+[![Version](https://img.shields.io/npm/v/@jollie/geohash)](https://www.npmjs.com/package/@jollie/geohash)
+[![Licence](https://img.shields.io/npm/l/@jollie/geohash)](https://en.wikipedia.org/wiki/MIT_license)
+[![Build](https://img.shields.io/travis/thejellyfish/geohash)](https://travis-ci.org/github/thejellyfish/geohash)
+[![Coverage](https://img.shields.io/codecov/c/github/thejellyfish/geohash)](https://codecov.io/gh/thejellyfish/geohash)
+[![Downloads](https://img.shields.io/npm/dt/@jollie/geohash)](https://www.npmjs.com/package/@jollie/geohash)
 
 # GeoHash encode/decode
 
@@ -22,15 +22,15 @@ _Inspired by https://github.com/sunng87/node-geohash._
 
 ### Install
 ```bash
-yarn add @jellyfish-commuting/geohash
+yarn add @jollie/geohash
 ```
 or
 ```bash
-npm install @jellyfish-commuting/geohash
+npm install @jollie/geohash
 ```
 ### Usage
 ```javascript
-import GeoHash from '@jellyfish-commuting/geohash';
+import GeoHash from '@jollie/geohash';
 
 // ... coordinates example
 const longitude = 4.2122126;
