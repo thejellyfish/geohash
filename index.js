@@ -242,24 +242,12 @@ function bbox(hash) {
   // Decode hash
   const decoded = decode(hash);
 
-  // Return 4 coordinates of box
+  // Return 4 coordinates of box [min lon, min lat, max lon, max lat]
   return [
-    [
-      ensure_valid_lon(decoded.geometry.coordinates[0] - decoded.properties.longitude_error),
-      ensure_valid_lat(decoded.geometry.coordinates[1] - decoded.properties.latitude_error),
-    ],
-    [
-      ensure_valid_lon(decoded.geometry.coordinates[0] - decoded.properties.longitude_error),
-      ensure_valid_lat(decoded.geometry.coordinates[1] + decoded.properties.latitude_error),
-    ],
-    [
-      ensure_valid_lon(decoded.geometry.coordinates[0] + decoded.properties.longitude_error),
-      ensure_valid_lat(decoded.geometry.coordinates[1] + decoded.properties.latitude_error),
-    ],
-    [
-      ensure_valid_lon(decoded.geometry.coordinates[0] + decoded.properties.longitude_error),
-      ensure_valid_lat(decoded.geometry.coordinates[1] - decoded.properties.latitude_error),
-    ],
+    ensure_valid_lon(decoded.geometry.coordinates[0] - decoded.properties.longitude_error),
+    ensure_valid_lat(decoded.geometry.coordinates[1] - decoded.properties.latitude_error),
+    ensure_valid_lon(decoded.geometry.coordinates[0] + decoded.properties.longitude_error),
+    ensure_valid_lat(decoded.geometry.coordinates[1] + decoded.properties.latitude_error),
   ];
 }
 
