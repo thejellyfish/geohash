@@ -88,7 +88,6 @@ GeoHash.neighbors('sndbuh');
 
 // Bbox
 GeoHash.bbox('sndbuh');
-// Return 4 coordinates of bbox
 
 ```
 ### Params
