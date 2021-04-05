@@ -81,6 +81,15 @@ GeoHash.decode('sn6zrge');
 //   }
 // }
 
+// Neightbors
+GeoHash.neighbors('sndbuh');
+// Return array of 8 neightbors n, ne, e, se, s, sw, w, nw 
+// ['sndbuj','sndbum','sndbuk','sndbu7','sndbu5','sndbgg','sndbgu','sndbgv']
+
+// Bbox
+GeoHash.bbox('sndbuh');
+// Return 4 coordinates of bbox
+
 ```
 ### Params
 
