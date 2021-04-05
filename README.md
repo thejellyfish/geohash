@@ -88,6 +88,7 @@ GeoHash.neighbors('sndbuh');
 
 // Bbox (bounding box)
 GeoHash.bbox('sndbuh');
+// Return array [min_lon, min_lat, max_lon, max_lat]
 
 ```
 ### Params
