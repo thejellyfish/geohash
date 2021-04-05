@@ -81,9 +81,9 @@ GeoHash.decode('sn6zrge');
 //   }
 // }
 
-// Neightbors
+// Neighbors
 GeoHash.neighbors('sndbuh');
-// Return array of 8 neightbors n, ne, e, se, s, sw, w, nw 
+// Return array of 8 neighbors n, ne, e, se, s, sw, w, nw 
 // ['sndbuj','sndbum','sndbuk','sndbu7','sndbu5','sndbgg','sndbgu','sndbgv']
 
 // Bbox (bounding box)
